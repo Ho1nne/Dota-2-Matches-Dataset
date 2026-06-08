@@ -25,8 +25,8 @@
   - [Данные](#данные)
   - [Что делает код](#что-делает-код)
   - [Структура репозитория](#структура-репозитория)
-  - [▶️ Запуск](#️-запуск)
-  - [🔗 Источники данных](#-источники-данных)
+  - [Запуск](#запуск)
+  - [Источники данных](#источники-данных)
 
 
 ---
@@ -83,7 +83,7 @@ Dota-2-Matches-Dataset/
 
 ---
 
-## ▶️ Запуск
+## Запуск
 
 ```bash
 python test.py
@@ -100,15 +100,15 @@ dota_game_id = 8823581121  # ← подставьте нужный ID из ко�
 
 ---
 
-## 🔗 Источники данных
+## Источники данных
 
-- 📦 Датасет: [Dota 2 Pro Matches — Kaggle](https://www.kaggle.com/datasets/ektarr/dota-2-pro-matches)
-- 🌐 API: [OpenDota API](https://docs.opendota.com/)
+- Датасет: [Dota 2 Pro Matches — Kaggle](https://www.kaggle.com/datasets/ektarr/dota-2-pro-matches)
+- API: [OpenDota API](https://docs.opendota.com/)
 
 ---
 
 <div align="center">
 
-⭐ Если проект оказался полезен — поставьте звезду!
+Если проект оказался полезен — поставьте звезду!
 
 </div>
