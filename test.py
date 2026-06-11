@@ -15,15 +15,45 @@ for file in os.listdir(path):
     print(file)
 
 
-# ───── Загрузить данные ─────────────────────────────────────────
+# ───── 1. Загрузить данные ─────────────────────────────────────────
 
 teams = pd.read_csv(f"{path}/teams.csv")
 tournaments = pd.read_csv(f"{path}/tournaments.csv")
 players = pd.read_csv(f"{path}/players.csv")
 tier1 = pd.read_csv(f"{path}/tier1_games.csv")
 
-for names, df in [("teams", teams), ("tournaments", tournaments), ("players", players)]:
-    pass
+for names, df in [
+    ("teams", teams),
+    ("tournaments", tournaments),
+    ("players", players),
+    ("tier1", tier1),
+]:
+    print(f"{names} → {df.shape[0]:,} строк × {df.shape[1]} колонок")
+
+
+# ───── 2. EDA ─────────────────────────────────────
+
+
+def EDA(df, name):
+    print(f"{name} → {df.shape[0]:,} строк × {df.shape[1]} колонок")
+    print("--- Типы данных и пропуски ---")
+    info_df = pd.DataFrame(
+        {
+            "type": df.dtypes,
+            "nulls": df.isnull().sum(),
+            "null_pct": (df.isnull().mean() * 100).round(2),
+        }
+    )
+    print(info_df.sort_values("nulls", ascending=False).to_string())
+
+    print(df.describe().round(2).to_string())
+    if not df.select_dtypes(include="object").empty:
+        print("\n--- Категориальные признаки (топ-3) ---")
+        for col in df.select_dtypes(include="object").columns:
+            print(f"{col}: {df[col].value_counts().index[:3].tolist()}")
+
+
+EDA(tier1, "tier1")
 
 
 """Получение подробной информации по ID игры"""

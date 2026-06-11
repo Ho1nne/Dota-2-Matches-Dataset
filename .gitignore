@@ -1,0 +1,14 @@
+# Виртуальное окружение
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Кэш kagglehub
+.cache/
+
+# macOS
+.DS_Store
