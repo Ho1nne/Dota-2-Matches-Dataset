@@ -10,5 +10,8 @@ __pycache__/
 # Кэш kagglehub
 .cache/
 
+# Скачанные матчи из OpenDota (их качает collect_matches.py)
+matches/
+
 # macOS
 .DS_Store
