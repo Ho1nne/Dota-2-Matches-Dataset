@@ -11,6 +11,12 @@
 ![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+<br>
+
+![Кривая вероятности победы Radiant по ходу матча](figures/winprob.gif)
+
+<sub>Вероятность победы Radiant обновляется минута за минутой — как live win-probability на трансляциях.</sub>
+
 </div>
 
 ---
